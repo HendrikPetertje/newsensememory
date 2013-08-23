@@ -1,4 +1,4 @@
 newsensememory
 ==============
 
-New Sense Memory Concrete Theme
+Newsense Memory Concrete Theme

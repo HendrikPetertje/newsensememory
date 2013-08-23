@@ -1,0 +1,1 @@
+// Script sheet for Newsense Memory all rights reserved. If you plan to copy stuff from this file contact me using www.picoreclame.nl or www.kaboomreclame.nl. Use is free, but I like to know where my code goes ;)

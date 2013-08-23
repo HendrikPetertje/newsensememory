@@ -1,0 +1,19 @@
+/* Casceding style sheet for Newsense Memory all rights reserved. If you plan to copy stuff from this file contact me using www.picoreclame.nl or www.kaboomreclame.nl. Use is free, but I like to know where my code goes ;) */
+
+/* Default blocks, colors etc. */
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.cleardiv {
+	clear: both;
+}
+
+img {
+	border: 0;
+}
+
