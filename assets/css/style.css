@@ -25,6 +25,13 @@ h1 {
 	text-transform: uppercase;
 }
 
+h2 {
+	font-size:18pt;
+	margin: 0;
+	font-family: 'Amaranth', sans-serif;
+	text-transform: uppercase;
+}
+
 /* ------------------- 960px based page sizes*/
 
 .full-container {
@@ -113,7 +120,7 @@ h1 {
 	margin:0 10px 0 10px ;
 }
 
-.nav-news {
+.nav-active {
 	background: url(/assets/images/nav-active.png) repeat-x;
 	font-size: 25pt;
 	height: 50px;
@@ -131,6 +138,7 @@ h1 {
 	background: url(/assets/images/newspage-background-1.png) no-repeat; ;
 	background-size: 100%;
 	position: relative;
+	min-height: 470px;
 }
 
 .newspage-inner {
@@ -212,4 +220,74 @@ h1 {
 	background: url(/assets/images/tourdata-background.png) no-repeat; ;
 	background-size: 100%;
 	background-position: bottom;
+	min-height: 550px;
+}
+
+.tourdata-page-inner {
+	width: 960px;
+	margin: 0 auto;
+	padding: 126px 0 0 0;
+}
+
+.tourdata-page-inner-left {
+	width: 290px;
+	height: 400px;
+	margin: 0 20px 0 0;
+	background: url(/assets/images/tour-page-pictures.png) top no-repeat;
+}
+
+.tourdata-page-inner-right {
+	width: 650px;
+}
+
+.tourdata-page-inner-right td {
+	padding: 5px;
+	margin: 0;
+
+}
+
+.table-top {
+	font-weight: bold;
+	font-family: 'Amaranth', sans-serif;
+}
+
+.table-row {
+	background-color: #DDD;
+}
+
+.table-row a {
+	color: #000;
+	text-decoration: underline;
+}
+
+.set-table-size {
+	width: 173px;
+}
+
+.small-table-size {
+	width: 100px;
+}
+
+.media-page-container {
+	background: #000;
+	color: #FFF;
+}
+
+.media-page-inner {
+	width: 960px;
+	margin: 0 auto;
+	padding: 126px 0 0 0;
+}
+
+.media-page-inner-left {
+	width: 330px;
+	margin: 0 20px 0 0;
+}
+
+.media-page-inner-right {
+	width: 610px;
+}
+
+.instagrampic {
+	margin: 5px;
 }
