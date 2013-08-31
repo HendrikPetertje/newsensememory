@@ -256,4 +256,21 @@ $( document ).ready(function(){
 		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
 		changepicturecallback: function(){ _bsap.exec(); }
 	});
+
+	// muziekspelertje tevoorschijn toveren
+
+	$('#play-music').click(function(){
+			$('.soundcloud-music-player').fadeIn();
+			$('#play-music').hide();
+			$('#stop-music').show();
+			$('#.soundcloud-music-helper').hide();
+			
+	});
+
+	$('#stop-music').click(function(){
+			$('.soundcloud-music-player').hide();
+			$('#play-music').show();
+			$('#stop-music').hide();
+	});
+
 })
