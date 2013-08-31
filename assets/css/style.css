@@ -135,7 +135,7 @@ h2 {
 /*newspage*/
 
 .newspage-container {
-	background: url(/assets/images/newspage-background-1.png) no-repeat; ;
+	background: url(/assets/images/newspage-background-1.png) no-repeat;
 	background-size: 100%;
 	position: relative;
 	min-height: 470px;
@@ -217,7 +217,7 @@ h2 {
 /*Tourdata pagina items*/
 
 .tourdata-page {
-	background: url(/assets/images/tourdata-background.png) no-repeat; ;
+	background: url(/assets/images/tourdata-background.png) no-repeat;
 	background-size: 100%;
 	background-position: bottom;
 	min-height: 550px;
@@ -290,4 +290,41 @@ h2 {
 
 .instagrampic {
 	margin: 5px;
+}
+
+.media-page-inner-right-content ul li {
+	display: inline;
+	padding: 0;
+}
+
+.media-page-inner-right-content {
+	margin-top:5px;
+}
+
+.media-page-inner-right-block {
+	/*float: left;*/
+	margin-bottom: 10px;
+}
+
+.socialmedia-page-container {
+	background: #252525;
+}
+
+.socialmedia-page-inner {
+	width: 960px;
+	margin: 0 auto;
+	padding: 126px 0 0 0;
+}
+
+.socialmedia-page-facebook {
+	width: 525px;
+	overflow: hidden;
+	margin: 0 20px 0 0;
+}
+
+.socialmedia-subscribe {
+	width: 378px;
+	color: #FFF;
+	padding: 5px;
+	background: #5D5D5D;
 }

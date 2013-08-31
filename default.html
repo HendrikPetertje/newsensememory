@@ -3,9 +3,11 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 	<title>Default pages - Newsense Memory</title>
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/prettyphoto.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="assets/javascript/script.js"></script>
+	<script src="assets/javascript/jquery.Prettyphoto.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Amaranth:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
 </head>
@@ -36,9 +38,9 @@
 						<li class="nav nav-line">|</li>
 						<li class="nav nav-media" id="nav-media"><a href="#media-page" class="scroll">Media</a></li>
 						<li class="nav nav-line">|</li>
-						<li class="nav nav-socialmedia" id="nav-socialmedia"><a href="#">Socialmedia</a></li>
+						<li class="nav nav-socialmedia" id="nav-socialmedia"><a href="#socialmediapage" class="scroll">Socialmedia</a></li>
 						<li class="nav nav-line">|</li>
-						<li class="nav nav-bio" id="nav-bio"><a href="#">Biografie</a></li>
+						<li class="nav nav-bio" id="nav-bio"><a href="#biografiepage" class="scroll">Biografie</a></li>
 					</ul>
 				</div>
 
@@ -286,10 +288,40 @@
 				<div class="media-page-inner-right-title">
 					<h2>Clips</h2>
 				</div>
+				<div class="media-page-inner-right-content">
+					<div class="gallery clearfix media-page-inner-right-block">
+						<a href="https://vimeo.com/27779348" rel="prettyPhoto" title="voorbeeld van video 1"><img src="assets/images/video/video-01.png" alt="Bon Iver - Holocene" /></a>
+					</div>
+					<div class="gallery clearfix">
+						<a href="http://vimeo.com/46100160" rel="prettyPhoto" title="voorbeeld van video 2"><img src="assets/images/video/video-02.png" alt="77 Bombay Street - Up in the sky" /></a>
+					</div>
+					<div class="cleardiv"></div>
+				</div>
+			</div>
+			<div class="cleardiv"></div>
+		</div><!-- mediapage -->
+	</div>
+	<div class="socialmedia-page-container full-content-container" id="socialmediapage">
+		<div class="socialmedia-page-inner">
+
+			<div class="socialmedia-page-facebook block"><div id="fb-root"></div> 
+				<!-- Begin Facebook blockje voor vervanging -->
+				<div id="fb-root"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+					<div class="fb-post" data-href="https://www.facebook.com/Newsensememory/posts/595753147150051"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Newsensememory/posts/595753147150051">Post</a> by <a href="https://www.facebook.com/Newsensememory">NewSense Memory</a>.</div></div>
+					<!-- Einde Facebook blockje voor vervanging -->
+			</div>
+			<div class="socialmedia-subscribe block">
+				Wil je op de hoogte blijven van Newsense Memory?<br>vul dan snel onderstaand formulier in om je in te schrijven voor onze gratis nieuwsbrief!<br>
+				<form action="mail.php" method="POST">
+				<p>Naam<br /> <input type="text" name="name"></p>
+				E-mail<br /> <input type="text" name="email">
+				<input type="submit" value="Sturen">
+				</form>
 			</div>
 			<div class="cleardiv"></div>
 		</div>
 	</div>
 
+	<div class="biografie-page-container full-content-container" id="biografiepage"></div>
 </body>
 </html>

@@ -8,12 +8,15 @@ $( document ).ready(function(){
 	    var scrollposition = $(this).scrollTop();
 
 	    // Scroll variabelen voor berekenen paginahoogte
-	    var tourdatapage = $(".newspage-container").height() - 1;
-		var mediapage = $(".newspage-container").height() + tourdatapage;
-		var socialmediapage = $('.tourdata-page').height() + mediapage;
+	    
+	    var newspage = $(".newspage-container").height() - 1;
+	    var tourdatapage = $('.tourdata-page').height() + newspage;
+	    var mediapage = $('.media-page-container').height() + tourdatapage;
+	    var socialmediapage = $('.socialmedia-page-container').height() + mediapage;
+	    var biografiepage = $('.biografie-page-container').height() + socialmediapage;
 	    
 	    // nieuwspagina navigatie
-	    if ((scrollposition > 0) && (scrollposition <= tourdatapage)){
+	    if ((scrollposition > 0) && (scrollposition <= newspage)){
 	    	// remove classes
 	    	$('#nav-tourdata').removeClass("nav-active");
 	    	$('#nav-media').removeClass("nav-active");
@@ -24,7 +27,7 @@ $( document ).ready(function(){
 	    };
 
 	    // tourdata navigatie
-	    if ((scrollposition > tourdatapage) && (scrollposition <= mediapage)){
+	    if ((scrollposition > newspage) && (scrollposition <= tourdatapage)){
 	    	// remove classes
 	    	$('#nav-news').removeClass("nav-active");
 	    	$('#nav-media').removeClass("nav-active");
@@ -35,7 +38,7 @@ $( document ).ready(function(){
 	    };
 
 	    // mediapage navigatie
-	    if ((scrollposition > mediapage) && (scrollposition <= socialmediapage)){
+	    if ((scrollposition > tourdatapage) && (scrollposition <= mediapage)){
 	    	// remove classes
 	    	$('#nav-news').removeClass("nav-active");
 	    	$('#nav-tourdata').removeClass("nav-active");
@@ -43,6 +46,28 @@ $( document ).ready(function(){
 	    	$('#nav-bio').removeClass("nav-active");
 	    	// add the right class
 	    	$('#nav-media').addClass("nav-active");
+	    };
+
+	    // socialmedia navigatie
+	    if ((scrollposition > mediapage) && (scrollposition <= socialmediapage)){
+	    	// remove classes
+	    	$('#nav-news').removeClass("nav-active");
+	    	$('#nav-tourdata').removeClass("nav-active");
+	    	$('#nav-media').removeClass("nav-active");
+	    	$('#nav-bio').removeClass("nav-active");
+	    	// add the right class
+	    	$('#nav-socialmedia').addClass("nav-active");
+	    };
+
+	     // biografie navigatie
+	    if ((scrollposition > socialmediapage) && (scrollposition <= biografiepage)){
+	    	// remove classes
+	    	$('#nav-news').removeClass("nav-active");
+	    	$('#nav-tourdata').removeClass("nav-active");
+	    	$('#nav-media').removeClass("nav-active");
+	    	$('#nav-socialmedia').removeClass("nav-active");
+	    	// add the right class
+	    	$('#nav-bio').addClass("nav-active");
 	    };
 	});
 
@@ -214,5 +239,21 @@ $( document ).ready(function(){
 			$('.button-newsitem-5').css('background-image', 'url(/assets/images/news-page-button-active.png)');
 		};
 		
-	})
+	});
+
+	// PrettyPhoto laten werken
+	$("area[rel^='prettyPhoto']").prettyPhoto();
+	
+	$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square'});
+	$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+
+	$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+		changepicturecallback: function(){ initialize(); }
+	});
+
+	$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+		changepicturecallback: function(){ _bsap.exec(); }
+	});
 })
