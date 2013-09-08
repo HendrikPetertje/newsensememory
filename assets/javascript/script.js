@@ -9,7 +9,7 @@ $( document ).ready(function(){
 
 	    // Scroll variabelen voor berekenen paginahoogte
 	    
-	    var newspage = $(".newspage-container").height() - 1;
+	    var newspage = $(".newspage-container").height() - 5;
 	    var tourdatapage = $('.tourdata-page').height() + newspage;
 	    var mediapage = $('.media-page-container').height() + tourdatapage;
 	    var socialmediapage = $('.socialmedia-page-container').height() + mediapage;
@@ -100,8 +100,7 @@ $( document ).ready(function(){
 	$(['/assets/images/newspage-background-1.png','/assets/images/newspage-background-2.png','/assets/images/newspage-background-3.png','/assets/images/newspage-background-4.png','/assets/images/newspage-background-5.png']).preload();
 
 
-	// nieuwsitem 1 weergeven
-	$('.button-newsitem-1').click(function(){
+	function shownews1() {
 		if ($('.news-item-2').is(":visible")) {
 			$('.news-item-2').hide();
 			$('.button-newsitem-2').css('background-image', 'url(/assets/images/news-page-button.png)');
@@ -125,12 +124,9 @@ $( document ).ready(function(){
 			$('.button-newsitem-1').css('background-image', 'url(/assets/images/news-page-button-active.png)');
 			$('.newspage-container').css('background-image', 'url(/assets/images/newspage-background-1.png)');
 		};
+	};
 
-		
-	})
-
-	// nieuwsitem 2 weergeven
-	$('.button-newsitem-2').click(function(){
+	function shownews2() {
 		if ($('.news-item-1').is(":visible")) {
 			$('.news-item-1').hide();
 			$('.button-newsitem-1').css('background-image', 'url(/assets/images/news-page-button.png)');
@@ -154,11 +150,9 @@ $( document ).ready(function(){
 			$('.newspage-container').css('background-image', 'url(/assets/images/newspage-background-2.png)');
 			$('.button-newsitem-2').css('background-image', 'url(/assets/images/news-page-button-active.png)');
 		};
-		
-	})
+	};
 
-	// nieuwsitem 3 weergeven
-	$('.button-newsitem-3').click(function(){
+	function shownews3() {
 		if ($('.news-item-1').is(":visible")) {
 			$('.news-item-1').hide();
 			$('.button-newsitem-1').css('background-image', 'url(/assets/images/news-page-button.png)');
@@ -182,11 +176,10 @@ $( document ).ready(function(){
 			$('.newspage-container').css('background-image', 'url(/assets/images/newspage-background-3.png)');
 			$('.button-newsitem-3').css('background-image', 'url(/assets/images/news-page-button-active.png)');
 		};
+	};
 
-	})
-
-	// nieuwsitem 4 weergeven
-	$('.button-newsitem-4').click(function(){
+	function shownews4() {
+		
 		if ($('.news-item-1').is(":visible")) {
 			$('.news-item-1').hide();
 			$('.button-newsitem-1').css('background-image', 'url(/assets/images/news-page-button.png)');
@@ -210,11 +203,9 @@ $( document ).ready(function(){
 			$('.newspage-container').css('background-image', 'url(/assets/images/newspage-background-4.png)');
 			$('.button-newsitem-4').css('background-image', 'url(/assets/images/news-page-button-active.png)');
 		};
-		
-	})
+	}
 
-	// nieuwsitem 4 weergeven
-	$('.button-newsitem-5').click(function(){
+	function shownews5() {
 		if ($('.news-item-1').is(":visible")) {
 			$('.news-item-1').hide();
 			$('.button-newsitem-1').css('background-image', 'url(/assets/images/news-page-button.png)');
@@ -238,8 +229,40 @@ $( document ).ready(function(){
 			$('.newspage-container').css('background-image', 'url(/assets/images/newspage-background-5.png)');
 			$('.button-newsitem-5').css('background-image', 'url(/assets/images/news-page-button-active.png)');
 		};
+	}
+
+	var newsClicked = true;
+
+	// nieuwsitem 1 weergeven
+	$('.button-newsitem-1').click(function(){
+		shownews1();
+	})
+
+	// nieuwsitem 2 weergeven
+	$('.button-newsitem-2').click(function(){
 		
+		shownews2();
+	})
+
+	// nieuwsitem 3 weergeven
+	$('.button-newsitem-3').click(function(){
+		
+		shownews3();
+	})
+
+	// nieuwsitem 4 weergeven
+	$('.button-newsitem-4').click(function(){
+		
+		shownews4()
+	})
+
+	// nieuwsitem 5 weergeven
+	$('.button-newsitem-5').click(function(){
+		
+		shownews5()
 	});
+
+
 
 	// PrettyPhoto laten werken
 	$("area[rel^='prettyPhoto']").prettyPhoto();
@@ -273,4 +296,22 @@ $( document ).ready(function(){
 			$('#stop-music').hide();
 	});
 
-})
+	while (newsClicked == false) {
+		if (newsClicked == false) {
+			shownews1();
+		};
+		if (newsClicked == false) {
+			shownews2();
+		};
+		if (newsClicked == false) {
+			shownews3();
+		};
+		if (newsClicked == false) {
+			shownews4();
+		};
+		if (newsClicked == false) {
+			shownews5();
+		};
+	}
+
+});

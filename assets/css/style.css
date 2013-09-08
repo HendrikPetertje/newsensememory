@@ -1,3 +1,8 @@
+/*dit weghalen bij toevoegen soundcloud-container*/
+.pre-release {
+	display:none;
+}
+
 /* Casceding style sheet for Newsense Memory all rights reserved. If you plan to copy stuff from this file contact me using www.picoreclame.nl or www.kaboomreclame.nl. Use is free, but I like to know where my code goes ;) */
 
 /* Default blocks, colors etc. */
@@ -146,6 +151,7 @@ h3 {
 .newspage-container {
 	background: url(/assets/images/newspage-background-1.png) no-repeat;
 	background-size: 100%;
+	background-position: bottom;
 	position: relative;
 	min-height: 470px;
 }
@@ -198,7 +204,10 @@ h3 {
 
 	background: url(/assets/images/news-page-button.png);
 	float: left;
-	margin: 0 20px;
+	/*onderstaand marge voor 5 nieuwsitems*/
+	/*margin: 0 20px;*/
+	/*onderstaand marge voor 3 nieuwsitems*/
+	margin: 0 41px;
 	cursor: pointer;
 
 }
